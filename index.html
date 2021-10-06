@@ -11,12 +11,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/toolpagejavascript.js"></script>
+    <script type="text/javascript" src="js/tables.js"></script>
     <link rel="icon" href="https://zohowebstatic.com/sites/default/files/ogimage/projects-logo.png" type="image/x-icon">
 
 </head>
 
 <body>
-    <div id="loader" class="center"></div>
+    <!--<div id="loader" class="center"></div>-->
     <!-- HEADER -->
     <div class="row header">
         <div class="col-md-4 col-sm-12">
@@ -357,7 +358,7 @@
                     <div class="form-group my-2">
                         <input type="name" style="font-size: 10px;width: 670px;" class="form-control sel-app-name impact-bor-cancel" id="exampleFormControlInput1" placeholder="Enter the Branch Url">
                     </div>
-                    <button type="button" style="font-size: 13px;" class="btn btn-danger btn-sm imp-btn mb-3 mt-2" id="imp-sub-btn">Check Impact</button>
+                    <button type="button" style="font-size: 10px;" class="btn btn-danger btn-sm imp-btn mb-3 mt-2" id="imp-sub-btn">Check Impact</button>
                 </div>
             </div>
         </div>
@@ -767,14 +768,14 @@
 
             <!-- BuildView -->
             <div id='build' class="bodySection codeReview">
-                <div class="codeReview1 mt-4 mb-4 ms-4">
+                <div class="codeReview1 mb-4 ms-4">
                     <div class="build-report">
                         <div class="container">
-                            <div class="new-build-btn">
-                                <div class="build-rep-head">
+                            <div class="new-build-btn ">
+                                <div class="build-rep-head mt-2">
                                     <h4>Build</h4>
                                 </div>
-                                <button type="button" class="btn btn-primary btn-sm" id="new-build"><b>+</b>Build</button>
+                                <button type="button" class="btn btn-primary btn-sm mt-2" id="new-build"><b>+</b>Build</button>
                                 <hr>
                             </div>
                             <div class="build-table container my-2">
@@ -790,35 +791,7 @@
                                             <th scope="col">View Source</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Lable 1</td>
-                                            <td>Tester 2</td>
-                                            <td>Task Remove</td>
-                                            <td>300</td>
-                                            <td>09-03-2021</td>
-                                            <td>link</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Lable 3</td>
-                                            <td>Tester 1</td>
-                                            <td>Task</td>
-                                            <td>300</td>
-                                            <td>09-04-2021</td>
-                                            <td>link</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Lable 1</td>
-                                            <td>Tester 1</td>
-                                            <td>Task Add</td>
-                                            <td>300</td>
-                                            <td>09-02-2021</td>
-                                            <td>link</td>
-                                        </tr>
-                                    </tbody>
+                                    <tbody id="tableData"></tbody>
                                 </table>
                             </div>
                         </div>
@@ -828,15 +801,16 @@
 
             <!-- RunTest -->
             <div id='runtest' class="bodySection run-report">
-                <div class="run-report1 mt-4 mb-4 ms-4">
+                <div class="run-report1 mb-4 ms-4">
                     <div class="new-run-btn container">
-                        <div class="run-rep-head">
+                        <div class="run-rep-head mt-2">
                             <h4>Test Run Report</h4>
                         </div>
-                        <button type="button" class="btn btn-secondary btn-sm" id="new-run"><b>+</b> Test Run</button>
+                        <button type="button" class="btn btn-secondary btn-sm mt-2" id="new-run"><b>+</b> Test Run</button>
                         <hr>
                     </div>
-                    <div class="run-table">
+                    <div class="run-table" style="position: relative;
+                    top: 50px;">
                         <div class="runTable container my-3">
                             <table class="table table-hover">
                                 <thead style="color: #3dc011;" class="thead-dark">
@@ -851,47 +825,7 @@
                                         <th scope="col">Test%</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Tester1</td>
-                                        <td>http//www.demo.com</td>
-                                        <td>Linux</td>
-                                        <td>3</td>
-                                        <td>Demo</td>
-                                        <td>Medium</td>
-                                        <td>10%</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Tester2</td>
-                                        <td>http//www.demo.com</td>
-                                        <td>Windows</td>
-                                        <td>3</td>
-                                        <td>Demo</td>
-                                        <td>Medium</td>
-                                        <td>20%</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Tester2</td>
-                                        <td>http//www.demo.com</td>
-                                        <td>Windows</td>
-                                        <td>3</td>
-                                        <td>Demo</td>
-                                        <td>Medium</td>
-                                        <td>0%</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Tester2</td>
-                                        <td>http//www.demo.com</td>
-                                        <td>Windows</td>
-                                        <td>3</td>
-                                        <td>Demo</td>
-                                        <td>Medium</td>
-                                        <td>70%</td>
-                                </tbody>
+                                <tbody id="runTableData"></tbody>
                             </table>
                         </div>
                     </div>
@@ -958,7 +892,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="container-fluid">
+                            <div class="container-fluid" style="position: fixed;
+                            width: 20%;">
                                 <div class="machine-header">
                                     <div class="txt-link my-3">
                                         <h6 style="color:red">Machines</h6>
@@ -974,7 +909,7 @@
                         <div class="col-md-9">
                             <div class="container-fluid">
                                 <div class="all-machine my-3" id="all-mch">
-                                    <table class="table table-hover table-sm">
+                                    <table class="table table-hover">
                                         <thead style="color:#0d6bf8bf">
                                             <tr>
                                                 <th scope="col">Device</th>
@@ -984,36 +919,7 @@
                                                 <th scope="col">Status</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td>192.192.192.0</td>
-                                                <td>Linux</td>
-                                                <td>-</td>
-                                                <td><button type="button" class="btn btn-outline-secondary btn-sm">connect</button></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>192.192.192.0</td>
-                                                <td>Windows</td>
-                                                <td>-</td>
-                                                <td><button type="button" class="btn btn-outline-secondary btn-sm">connect</button></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>192.192.192.0</td>
-                                                <td>Windows</td>
-                                                <td>-</td>
-                                                <td><button type="button" class="btn btn-outline-secondary btn-sm">connect</button></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">4</th>
-                                                <td>192.192.192.0</td>
-                                                <td>Linux</td>
-                                                <td>-</td>
-                                                <td><button type="button" class="btn btn-outline-secondary btn-sm">connect</button></td>
-                                            </tr>
-                                        </tbody>
+                                        <tbody id="machineTableData"></tbody>
                                     </table>
                                 </div>
                                 <div class="container-fluid my-3">
@@ -1142,18 +1048,24 @@
             <div id='bug' class="bodySection bugReport ms-4 mt-4 mb-4">
                 <div class="bugReport1">
                     <div class="container my-2">
-                        <div class="bug-header h-10">
+                        <div class="bug-header" style="position: fixed;
+                        height: 55px;
+                        width: 85%;
+                        margin-top: -24px;
+                        background: #eae9e9;
+                        z-index: 1;">
                             <div class="row">
                                 <div class="col-6">
-                                    <h5 class="text-primary">Bug Report</h5>
+                                    <h5 class="text-primary mt-2">Bug Report</h5>
                                 </div>
                                 <div class="col-6 text-end">
-                                    <button class="btn btn-primary btn-sm " id="bug-Id-new">AddBug</button>
+                                    <button class="btn btn-primary btn-sm mt-2" id="bug-Id-new">AddBug</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="bug-table my-3">
-                            <table class="table table-hover table-sm">
+                        <div class="bug-table " style="position: relative;
+                        top: 25px;">
+                            <table class="table table-hover">
                                 <thead style="color: red;" class="thead-dark">
                                     <tr>
                                         <th scope="col">Id</th>
@@ -1163,7 +1075,7 @@
                                         <th scope="col">Assinee Name</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="bugTableData">
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>TaskCreate</td>
