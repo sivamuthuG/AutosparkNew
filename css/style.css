@@ -280,7 +280,7 @@ body {
 }
 
 .moreIconTxt {
-    color: cadetblue;
+    color: #de794b;
     font-size: 11px;
     float: left;
     margin-left: 5px;
@@ -288,7 +288,7 @@ body {
 }
 
 .linkIcon {
-    color: cadetblue;
+    color: #de794b;
     font-size: 17px;
     margin-top: 11px;
     float: left;
@@ -308,7 +308,7 @@ body {
 }
 
 .impactIcon {
-    color: cadetblue;
+    color: #de794b;
     font-size: 20px;
     margin-top: 10px;
     float: left;
@@ -525,8 +525,12 @@ td {
 
 .new-build-btn {
     text-align: end;
-    margin-top: 20px;
-    height: 60px;
+    position: fixed;
+    height: 55px;
+    width: 82%;
+    margin-top: -7px;
+    z-index: 1;
+    background: #eae9e9;
 }
 
 .build-rep-head {
@@ -536,6 +540,8 @@ td {
 
 .build-table {
     height: auto;
+    position: relative;
+    top: 55px;
     border-bottom: 1px solid #d3c9c9;
 }
 
@@ -732,6 +738,11 @@ td {
 
 .new-run-btn {
     text-align: end;
+    position: fixed;
+    background: #eae9e9;
+    z-index: 2;
+    height: 55px;
+    margin-top: -15px;
 }
 
 .run-rep-head {
@@ -1101,7 +1112,7 @@ td {
 }
 
 .bugIcon1 {
-    color: cadetblue;
+    color: #de794b;
     font-size: 20px;
     margin-top: 10px;
     float: left;
